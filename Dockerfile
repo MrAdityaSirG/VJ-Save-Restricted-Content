@@ -13,8 +13,12 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y gcc libpq-dev && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install --no-install-recommends -y \
+        gcc \
+        libpq-dev \
+        build-essential \
+        python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install pipenv or poetry if needed (uncomment if you use it)
 # RUN pip install --upgrade pip pipenv
