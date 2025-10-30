@@ -1,3 +1,17 @@
+# VJ Save Restricted Content
+
+[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrAdityaSirG/VJ-Save-Restricted-Content)
+
+Telegram bot to save restricted content.
+
+## Deploy
+
+Click the button below to deploy on Heroku:
+
+[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrAdityaSirG/VJ-Save-Restricted-Content)
+
+Or, manually clone the repo and set the environment variables as shown in [`config.py`](config.py).
+
 # VJ Save Restricted Bot
 
 *A Telegram Bot, Which Can Send You Restricted Content By It's Post Link With <b>Login Feature.</b>*
