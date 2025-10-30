@@ -2,5 +2,13 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: gunicorn app:app
-  worker: python3 bot.py
+  web:
+    image: web
+    command:
+      - gunicorn
+      - app:app
+  worker:
+    image: web
+    command:
+      - python3
+      - bot.py
