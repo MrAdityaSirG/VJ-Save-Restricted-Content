@@ -1,0 +1,68 @@
+{
+  "name": "VJ Save Restricted Content",
+  "description": "A Telegram bot to save and upload restricted content. Deployable on Heroku.",
+  "repository": "https://github.com/MrAdityaSirG/VJ-Save-Restricted-Content",
+  "keywords": ["telegram", "bot", "python", "pyrogram", "media"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your bot token from @BotFather",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Your API ID from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your API Hash from https://my.telegram.org",
+      "required": true
+    },
+    "ADMINS": {
+      "description": "Your Telegram user ID (for admin access)",
+      "required": true
+    },
+    "CHANNEL_ID": {
+      "description": "Channel ID where the bot uploads files (optional)",
+      "required": false
+    },
+    "DB_URI": {
+      "description": "MongoDB connection URI (required for data storage)",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "MongoDB Database Name",
+      "required": false,
+      "value": "vjsavecontentbot"
+    },
+    "LOGIN_SYSTEM": {
+      "description": "Set to True to enable login system, False to disable",
+      "required": false,
+      "value": "True"
+    },
+    "STRING_SESSION": {
+      "description": "Fill only if LOGIN_SYSTEM is False (Pyrogram session string)",
+      "required": false
+    },
+    "WAITING_TIME": {
+      "description": "Time in seconds to wait between actions (default: 10)",
+      "required": false,
+      "value": "10"
+    },
+    "ERROR_MESSAGE": {
+      "description": "Set to True to receive error messages in PM",
+      "required": false,
+      "value": "True"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "stack": "container"
+}
